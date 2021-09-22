@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+.container {
+	display: flex;
+	gap: 40px;
+	/* justify-content: center;
+	align-content: center; */
+}
+
+/* ############################################ Letter E ############################## */
+
+.shape1 {
+	width: 400px;
+	height: 600px;
+	background-color: black;
+	position: relative;
+}
+
+.shape1::before {
+	content: "";
+	position: absolute;
+	width: 82%;
+	height: 33%;
+	background-color: white;
+	transform: translate(22%, 35%);
+}
+.shape1::after {
+	content: "";
+	position: absolute;
+	width: 82%;
+	height: 33%;
+	background-color: white;
+	transform: translate(22%, 170%);
+}
+
+/* ############################################# moving BOX 1 ############################ */
+
+.box1 {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	position: absolute;
+	transform: translate(680%, -1180%);
+	animation: move1 5s linear 1;
+}
+@keyframes move1 {
+	0% {
+		transform: translate(680%, -1180%);
+	}
+
+	11% {
+		transform: translate(25%, -1180%);
+	}
+
+	22% {
+		transform: translate(25%, -650%);
+	}
+
+	33% {
+		transform: translate(680%, -650%);
+	}
+
+	44% {
+		transform: translate(25%, -650%);
+	}
+
+	55% {
+		transform: translate(25%, -115%);
+	}
+
+	66% {
+		transform: translate(680%, -115%);
+	}
+
+	77% {
+		transform: translate(25%, -115%);
+	}
+
+	88% {
+		transform: translate(25%, -1180%);
+	}
+
+	100% {
+		transform: translate(680%, -1180%);
+	}
+}
+/* ########################################## Letter L ########################################  */
+.shape2 {
+	width: 400px;
+	height: 600px;
+	background-color: black;
+	position: relative;
+}
+
+.shape2::before {
+	content: "";
+	position: absolute;
+	width: 82%;
+	height: 89.1%;
+	background-color: white;
+	transform: translate(22%, 0%);
+}
+
+.shape2::after {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/* bottom: 1.5%;
+	right: 2%; */
+	background-color: red;
+	transform: translate(680%, 1085%);
+	animation: move2 3s linear 5s 1;
+}
+
+/* ##################################### Moving BOX 2 ##################################### */
+@keyframes move2 {
+	0% {
+		transform: translate(680%, 1085%);
+		background-color: red;
+	}
+
+	35% {
+		transform: translate(25%, 1085%);
+		background-color: red;
+	}
+
+	65% {
+		transform: translate(25%, 20%);
+		background-color: red;
+	}
+
+	85% {
+		transform: translate(25%, 20%);
+	}
+
+	100% {
+		transform: translate(25%, 20%);
+		background-color: transparent;
+	}
+}
